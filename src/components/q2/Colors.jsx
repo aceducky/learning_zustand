@@ -1,4 +1,4 @@
-import { useColorStore } from "./color_store";
+import { useColorStore } from "./useColorStore";
 import { colors_list } from "./colors_list";
 
 export default function Colors() {
