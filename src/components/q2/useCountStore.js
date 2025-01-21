@@ -1,7 +1,11 @@
-import { create } from 'zustand';
+import { create } from "zustand";
+import { devtools } from "zustand/middleware";
 
-
-export const useCountStore = create((set) => ({
-    count: 0,
-    increaseCount: () => set((state) => ({ count: state.count + 1 }))
-}));
+export const useCountStore = create(
+    devtools(
+        (set) => ({
+            count: 0,
+            increaseCount: () => set((state) => ({ count: state.count + 1 })),
+        })
+    )
+);
